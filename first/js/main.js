@@ -13,6 +13,7 @@ window.onload=function () {
 }
 var mv={ };  //命名空间
 mv.tools={ };
+//获取类名
 mv.tools.getByClass=function (oParent,sClass) {
     var aEle=oParent.getElementsByTagName('*');
     var arr=[];
@@ -264,6 +265,5 @@ mv.app.toRun=function () {
         mv.ui.moveLeft(oUl,-iNow*aLi[0].offsetWidth,-(iNow+1)*aLi[0].offsetWidth);
 
         iNow++;
-
     };
 }
