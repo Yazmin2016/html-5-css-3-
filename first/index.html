@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>一个英文网站</title>
     <link  rel="stylesheet"  href="index.css">
-    <!--<script src="js/main.js"></script>-->
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div id="top">
@@ -19,8 +19,8 @@
         <ul class="top_bar">
             <li class="tel">123.456.7890</li>
             <li class="help"><a href="#">Live Help</a></li>
-            <li class="space"><img src="images/top_img1.png" alt=""></li>
-            <li class="space"><img src="images/top_img2.png" alt=""></li>
+            <li class="space ie6_img"><img src="images/top_img1.png" alt=""></li>
+            <li class="space ie6_img"><img src="images/top_img2.png" alt=""></li>
         </ul>
     </div>
     <div id="header">
@@ -30,7 +30,7 @@
         </div>
         <h1 title="ECOMMERCE WEBSITE"><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
         <div class="search">
-            <input class="text" type="text" value="Search website">
+            <input id="text1" class="text" type="text" value="Search website">
             <input class="btn" type="submit" value="">
         </div>
     </div>
@@ -51,8 +51,14 @@
         <div id="content_top">
             <div id="content_bottom">
                 <div id="ad">
+                    <a href="javascript:;" class="prev"></a>
+                    <a href="javascript:;" class="next"></a>
+                    <span class="prev_bg"></span>
+                    <span class="next_bg"></span>
                     <ul>
-                        <li><a href="#"><img src="images/banner/1.png" alt=""></a></li>
+                        <li style="filter:alpha(opacity=100); opacity:1;"><a href="#a1"><img src="images/banner/1.png" alt="" /></a></li>
+                        <li><a href="#a2"><img src="images/banner/2.png" alt="" /></a></li>
+                        <li><a href="#a3"><img src="images/banner/3.png" alt="" /></a></li>
                     </ul>
                     <h2>product title</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit lacus dapibus ante mattis in adipiscing nibh placerat. Cras bibendum porta diam, non dignissim sapien malesuada vitae. </p>
@@ -103,7 +109,7 @@
                         </div>
                     </div>
                     <div id="wrap" >
-                        <div class="sort">
+                        <div id="sort" class="sort">
                             <dl>
                                 <dt>Sort by:</dt>
                                 <dd>

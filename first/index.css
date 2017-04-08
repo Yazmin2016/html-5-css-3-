@@ -49,7 +49,7 @@ body{
     color: #ffffff;
 }
 .top_bar{
-float: right;
+    float: right;
 }
 .top_bar li{
     float: left;
@@ -74,6 +74,12 @@ float: right;
     margin-left:12px;
     margin-top:4px;
 }
+/*.ie6_img{*/
+    /*float: left;*/
+    /*position: relative;*/
+    /*top:6px;*/
+/*}*/
+
 #header{
     width:960px;
     height:100px;
@@ -159,13 +165,14 @@ float: right;
     margin-right:2px;
 }
 #nav a{
-   float: left;
+    float: left;
     height:28px;
     text-decoration: none;
     color: #ffffff;
     font-size: 15px;
     font-family: Arial;
     line-height: 28px;
+    cursor: pointer;
 }
 #nav strong{
     float: left;
@@ -212,21 +219,22 @@ float: right;
     position: relative;
     margin:0px auto;
 }
-
-#ad ul{
+#ad ul,#ad li,#ad h2, #ad p {
     position: absolute;
-    top:0px;
-    left:0;
     z-index: 1;
 }
 
-#ad li{
-    position: absolute;
+#ad ul{
     top:0;
     left:0;
 }
+#ad li{
+    top:0;
+    left:0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
 #ad h2{
-    position: absolute;
     left: 0px;
     bottom:8px ;
     z-index: 3;
@@ -236,7 +244,6 @@ float: right;
     font-size: 25px;
 }
 #ad p{
-    position: absolute;
     left:268px ;
     bottom:8px;
     z-index: 3;
@@ -255,6 +262,26 @@ float: right;
     bottom: 0px;
     z-index: 2;
 }
+#ad .next,#ad .prev{
+    width:75px;
+    height:150px;
+    margin-top: -75px;
+    position:absolute;
+    top:50%;
+    z-index:6;
+    display:none;
+}
+#ad .prev {
+    background:url(images/banner/prev.png);
+    left:0;
+}
+#ad .next {
+    background:url(images/banner/next.png);
+    right:0;
+}
+#ad .prev_bg,#ad .next_bg { position:absolute; top:0; z-index:5; width:470px; height:300px; filter:alpha(opacity:0); opacity:0; }
+#ad .prev_bg { left:0; background:yellow; }
+#ad .next_bg { right:0; background:red; }
 /*content-mian*/
 .main{
     width:942px;
@@ -622,7 +649,8 @@ overflow: hidden;
 }
 #footer_info .ico1 {
     background:url(images/footer_info.png) no-repeat 0 4px;
-    text-indent:60px; margin-right:25px;
+    text-indent:60px;
+    margin-right:25px;
 }
 #footer_info .ico2 {
     background:url(images/footer_info.png) no-repeat 0 -52px;
@@ -657,13 +685,13 @@ overflow: hidden;
     font-size:13px;
     color:#cfcfcf;
 }
+#footer_link span{
+    color: #ffc200;
+}
 #footer_link .space {
     padding-top:20px;
 }
-#footer_link .pos {
-    position:relative;
-    left:-20px;
-}
+
 
 
 
